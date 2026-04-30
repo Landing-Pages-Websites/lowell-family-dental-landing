@@ -40,9 +40,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Real IDs populated after Mega Admin registration
-  const SITE_ID = "__SITE_ID__";
-  const SITE_KEY = "__SITE_KEY__";
+  // Real IDs populated 2026-04-30 — registered via `mega site-tracking enable`
+  const SITE_ID = "f73de92d-2920-49ec-b362-59ab32ad3306";
+  const SITE_KEY = "6jwfcm5uszlajeql";
 
   return (
     <html

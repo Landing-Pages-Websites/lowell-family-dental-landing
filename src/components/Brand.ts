@@ -18,9 +18,10 @@ export const HOURS = [
   ["Sunday", "Closed"],
 ] as const;
 
-// Mega tracking — populated after Mega Admin registration.
-export const SITE_ID = "__SITE_ID__";
-export const SITE_KEY = "__SITE_KEY__";
+// Mega tracking — registered 2026-04-30 via `mega site-tracking enable`.
+// status=active, type=EXTERNAL_SITE (Anthony to flip to OWNED_SITE in admin UI).
+export const SITE_ID = "f73de92d-2920-49ec-b362-59ab32ad3306";
+export const SITE_KEY = "6jwfcm5uszlajeql";
 export const CUSTOMER_ID = "9efd2f87-3807-48f7-a43d-0fa834262132";
 export const SOURCE_PROVIDER = "lowell-family-dental-landing";
 
