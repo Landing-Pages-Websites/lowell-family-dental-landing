@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description:
       "Get your confident smile back with custom dental implants from a board-certified specialist. Free consultation, financing available, stress-free experience.",
     type: "website",
-    url: "https://lowell-family-dental-landing.vercel.app",
+    url: "https://book.lowellfamilydentalpractice.com",
   },
   icons: {
     icon: "/icon.png",
