@@ -36,7 +36,8 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
   letter-spacing: -0.015em;
-  color: var(--color-text);
+  /* Color inherits from parent so Tailwind text-white / text-* classes work
+     on dark and colored sections without specificity conflicts. */
 }
 
 h1 { letter-spacing: -0.025em; }

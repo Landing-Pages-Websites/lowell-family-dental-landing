@@ -22,8 +22,8 @@ export function Doctor() {
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] bg-[var(--color-soft-blue)]">
               <Image
-                src="/doctor-portrait.webp"
-                alt="Board-certified implant specialist Dr. Iham Gammas, Lowell Family Dental Practice & Implant Center"
+                src="/patient-e286d6f3.webp"
+                alt="Dr. Iham Gammas, board-certified implant specialist at Lowell Family Dental Practice &amp; Implant Center"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"

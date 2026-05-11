@@ -113,37 +113,21 @@ export function Hero() {
           </Reveal>
         </div>
 
-        {/* Right: Form with floating smile photo card */}
+        {/* Right: Form */}
         <div className="lg:col-span-5">
           <Reveal variant="right" delay={140}>
             <div className="relative">
-              {/* Floating smile photo card — visible offset to the top-right */}
-              <div className="hidden lg:block absolute -top-10 -right-8 w-48 h-60 rounded-3xl overflow-hidden shadow-2xl rotate-[4deg] z-20 ring-4 ring-white">
-                <Image
-                  src="/hero-smile.webp"
-                  alt="Lowell patient with a confident, healthy smile after dental implant treatment"
-                  width={400}
-                  height={500}
-                  className="w-full h-full object-cover"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/15 via-transparent to-transparent" />
-              </div>
-              {/* Floating badge */}
-              <div className="hidden lg:flex absolute -bottom-6 -left-10 z-20 items-center gap-3 bg-white rounded-2xl shadow-2xl px-4 py-3 border border-[var(--color-border)]">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] font-bold">
-                    Free
+              {/* Floating CT-scan badge — visible offset to top-right of form */}
+              <div className="hidden lg:flex absolute -top-5 -right-5 z-20 items-center gap-3 bg-[var(--color-accent)] text-white rounded-2xl shadow-2xl px-4 py-3">
+                <svg className="w-7 h-7 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <div className="text-left">
+                  <div className="text-[10px] uppercase tracking-widest font-bold text-white/85 leading-none">
+                    Included Free
                   </div>
-                  <div className="text-sm font-bold text-[var(--color-primary)] leading-tight">
+                  <div className="text-base font-extrabold leading-tight">
                     3D CT Scan
-                    <br />
-                    Included
                   </div>
                 </div>
               </div>
