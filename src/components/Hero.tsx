@@ -9,62 +9,56 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative pt-28 sm:pt-32 lg:pt-36 pb-12 sm:pb-16 lg:pb-20 overflow-hidden"
+      className="relative pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 overflow-hidden"
     >
-      {/* Layered background — soft blue gradient + subtle pattern */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-soft-blue-2)] via-white to-[var(--color-soft-blue)]" />
-        <div
-          className="absolute inset-0 opacity-[0.18]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, rgba(30,66,136,0.45) 1px, transparent 0)",
-            backgroundSize: "32px 32px",
-          }}
-        />
-        {/* Soft accent blob */}
-        <div
-          aria-hidden
-          className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full opacity-25"
-          style={{
-            background:
-              "radial-gradient(closest-side, rgba(231,116,0,0.45), transparent 70%)",
-          }}
-        />
-        <div
-          aria-hidden
-          className="absolute -bottom-40 -left-32 w-[520px] h-[520px] rounded-full opacity-30"
-          style={{
-            background:
-              "radial-gradient(closest-side, rgba(30,66,136,0.30), transparent 70%)",
-          }}
-        />
-      </div>
+      {/* Background: deep brand gradient with photo overlay on the left */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[var(--color-primary-dark)] via-[var(--color-primary)] to-[#1a3a78]" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-        {/* Left: copy column */}
-        <div className="lg:col-span-7">
+      {/* Decorative pattern */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.5) 1px, transparent 0)",
+          backgroundSize: "32px 32px",
+        }}
+      />
+
+      {/* Accent glow */}
+      <div
+        aria-hidden
+        className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full opacity-25 -z-10"
+        style={{
+          background:
+            "radial-gradient(closest-side, rgba(231,116,0,0.55), transparent 70%)",
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        {/* Left: copy column — over the gradient, light text */}
+        <div className="lg:col-span-7 text-white">
           <Reveal variant="up">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--color-primary)]/20 bg-white/80 backdrop-blur px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 backdrop-blur px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white">
               <span className="w-2 h-2 rounded-full bg-[var(--color-accent)]" />
-              Lowell, MA · Implant Center
+              Lowell, MA · Board-Certified Implant Center
             </span>
           </Reveal>
           <Reveal variant="up" delay={80}>
-            <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-[var(--color-text)]">
+            <h1 className="mt-5 text-4xl sm:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.04]">
               Get a permanent, confident smile with{" "}
-              <span className="text-[var(--color-primary)]">dental implants</span> in Lowell.
+              <span className="text-[var(--color-accent-light)]">dental implants</span> in Lowell.
             </h1>
           </Reveal>
           <Reveal variant="up" delay={160}>
-            <p className="mt-5 text-lg sm:text-xl text-[var(--color-text-muted)] max-w-2xl">
-              Board-certified implant specialist · 3D CT-guided precision · Flexible financing
-              and exclusive new-patient discounts. Eat, smile and laugh again — without
-              embarrassment, without dentures, without the run-around.
+            <p className="mt-5 text-lg sm:text-xl text-white/90 max-w-2xl leading-relaxed">
+              Board-certified implant specialist. 3D CT-guided precision.
+              Flexible financing and exclusive new-patient discounts. Eat, smile and
+              laugh again — without dentures, without embarrassment, without the run-around.
             </p>
           </Reveal>
           <Reveal variant="up" delay={220}>
-            <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 max-w-xl">
+            <ul className="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 max-w-xl">
               {[
                 "Single, multi-tooth & full-arch (All-on-4)",
                 "Sedation options for anxious patients",
@@ -73,24 +67,20 @@ export function Hero() {
               ].map((line) => (
                 <li
                   key={line}
-                  className="flex items-start gap-2 text-[var(--color-text)] text-[15px] sm:text-base font-medium"
+                  className="flex items-start gap-2.5 text-white text-[15px] sm:text-base font-medium"
                 >
-                  <svg
-                    className="w-5 h-5 text-[var(--color-accent)] shrink-0 mt-[2px]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2.6"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <span className="w-6 h-6 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0">
+                    <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
                   {line}
                 </li>
               ))}
             </ul>
           </Reveal>
           <Reveal variant="up" delay={300}>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center gap-5">
               <a href="#contact" className="btn-primary text-base sm:text-lg">
                 Book My Free Consultation
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -99,7 +89,7 @@ export function Hero() {
               </a>
               <a
                 href={PHONE_HREF}
-                className="inline-flex items-center gap-2 text-[var(--color-primary)] font-bold hover:underline"
+                className="inline-flex items-center gap-2 text-white font-bold hover:text-[var(--color-accent-light)] transition"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z" />
@@ -109,33 +99,53 @@ export function Hero() {
             </div>
           </Reveal>
           <Reveal variant="up" delay={380}>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-[var(--color-text-muted)]">
-              <div className="flex items-center gap-1.5">
+            <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-white/85">
+              <div className="flex items-center gap-2">
                 <Stars />
-                <span className="font-semibold text-[var(--color-text)]">4.9</span>
+                <span className="font-semibold text-white">4.9</span>
                 <span>(200+ patient reviews)</span>
               </div>
-              <span aria-hidden className="hidden sm:block w-px h-4 bg-[var(--color-border)]" />
-              <span>133 Market St., Lowell, MA</span>
-              <span aria-hidden className="hidden sm:block w-px h-4 bg-[var(--color-border)]" />
-              <span>BCBS &amp; major insurances accepted</span>
+              <span aria-hidden className="hidden sm:block w-px h-4 bg-white/30" />
+              <span className="font-medium">133 Market St., Lowell, MA</span>
+              <span aria-hidden className="hidden sm:block w-px h-4 bg-white/30" />
+              <span className="font-medium">BCBS &amp; major insurances accepted</span>
             </div>
           </Reveal>
         </div>
 
-        {/* Right: form */}
+        {/* Right: Form with floating smile photo card */}
         <div className="lg:col-span-5">
           <Reveal variant="right" delay={140}>
             <div className="relative">
-              {/* Decorative photo card behind */}
-              <div className="hidden lg:block absolute -top-6 -left-6 w-44 h-44 rounded-2xl overflow-hidden shadow-xl rotate-[-4deg] z-0">
+              {/* Floating smile photo card — visible offset to the top-right */}
+              <div className="hidden lg:block absolute -top-10 -right-8 w-48 h-60 rounded-3xl overflow-hidden shadow-2xl rotate-[4deg] z-20 ring-4 ring-white">
                 <Image
-                  src="/clinic.webp"
-                  alt="Lowell Family Dental Practice clinic interior"
-                  width={300}
-                  height={300}
+                  src="/hero-smile.webp"
+                  alt="Lowell patient with a confident, healthy smile after dental implant treatment"
+                  width={400}
+                  height={500}
                   className="w-full h-full object-cover"
+                  priority
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/15 via-transparent to-transparent" />
+              </div>
+              {/* Floating badge */}
+              <div className="hidden lg:flex absolute -bottom-6 -left-10 z-20 items-center gap-3 bg-white rounded-2xl shadow-2xl px-4 py-3 border border-[var(--color-border)]">
+                <div className="w-10 h-10 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] font-bold">
+                    Free
+                  </div>
+                  <div className="text-sm font-bold text-[var(--color-primary)] leading-tight">
+                    3D CT Scan
+                    <br />
+                    Included
+                  </div>
+                </div>
               </div>
               <div className="relative z-10">
                 <LeadForm
@@ -154,7 +164,7 @@ export function Hero() {
 
 function Stars() {
   return (
-    <span className="flex items-center text-[var(--color-accent)]">
+    <span className="flex items-center text-[var(--color-accent-light)]">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg key={i} className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
           <path d="M10 1.5l2.6 5.3 5.9.86-4.25 4.14 1 5.86L10 14.9l-5.27 2.77 1-5.86L1.5 7.66l5.9-.86L10 1.5z" />

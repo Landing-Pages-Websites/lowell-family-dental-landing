@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Reveal } from "./Reveal";
 import { PHONE, PHONE_HREF } from "./Brand";
 
@@ -77,28 +78,55 @@ export function Technology() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="max-w-3xl">
-          <Reveal>
-            <span className="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-white/70">
-              Technology &amp; Comfort
-            </span>
-          </Reveal>
-          <Reveal delay={80}>
-            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.1]">
-              Implants done right means doing them precisely — and comfortably.
-            </h2>
-          </Reveal>
-          <Reveal delay={140}>
-            <p className="mt-4 text-lg text-white/85">
-              Most general dentists eyeball implant placement. We don&rsquo;t. Every implant we
-              place is digitally planned from a 3D CT scan, executed with a custom surgical
-              guide, and supported by sedation options for patients who&rsquo;d rather not feel
-              a thing. This is what &ldquo;stress-free&rdquo; actually looks like.
-            </p>
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Left: copy */}
+          <div className="lg:col-span-7">
+            <Reveal>
+              <span className="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-[var(--color-accent-light)]">
+                Technology &amp; Comfort
+              </span>
+            </Reveal>
+            <Reveal delay={80}>
+              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.1]">
+                Implants done right means doing them precisely — and comfortably.
+              </h2>
+            </Reveal>
+            <Reveal delay={140}>
+              <p className="mt-4 text-lg text-white/85 leading-relaxed">
+                Most general dentists eyeball implant placement. We don&rsquo;t. Every implant we
+                place is digitally planned from a 3D CT scan, executed with a custom surgical
+                guide, and supported by sedation options for patients who&rsquo;d rather not feel
+                a thing. This is what &ldquo;stress-free&rdquo; actually looks like.
+              </p>
+            </Reveal>
+          </div>
+
+          {/* Right: CT scan / tech photo */}
+          <Reveal variant="right" delay={100} className="lg:col-span-5">
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[5/4] ring-4 ring-white/10">
+                <Image
+                  src="/tech-ct.webp"
+                  alt="3D CT scan imaging technology used at Lowell Family Dental Practice"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-primary-dark)]/40 via-transparent to-transparent" />
+              </div>
+              <div className="absolute -bottom-5 -left-5 bg-[var(--color-accent)] text-white rounded-2xl px-5 py-3 shadow-2xl">
+                <div className="text-[11px] font-bold uppercase tracking-widest text-white/85">
+                  Included
+                </div>
+                <div className="text-lg font-extrabold leading-tight">
+                  Free 3D CT Scan
+                </div>
+              </div>
+            </div>
           </Reveal>
         </div>
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {FEATURES.map((f, i) => (
             <Reveal key={f.title} delay={120 + i * 80}>
               <div className="h-full rounded-2xl bg-white/5 backdrop-blur-sm border border-white/15 p-6 hover:bg-white/10 transition">

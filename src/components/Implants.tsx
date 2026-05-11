@@ -112,8 +112,8 @@ export function Implants() {
         eyebrow="Single tooth"
         title="Replace one missing tooth — without touching the healthy ones beside it."
         body="When a tooth is lost or fails, a single implant is the gold-standard fix: a titanium post placed in the jaw, topped with a custom-shaded ceramic crown. Unlike a bridge, it doesn't require grinding down the neighboring teeth, and unlike a partial denture, it stays put when you eat. From start to finished crown, most patients are back to normal in 3–4 months."
-        image="/patient-919ed506.webp"
-        imageAlt="Woman smiling after dental implant treatment in Lowell"
+        image="/smile-confident.webp"
+        imageAlt="Patient with a restored, confident smile after a single dental implant in Lowell"
         bullets={[
           "Looks identical to your other teeth",
           "Doesn't damage adjacent teeth (unlike a bridge)",
@@ -127,8 +127,8 @@ export function Implants() {
         eyebrow="Multiple teeth"
         title="Implant-supported bridges for two or more missing teeth in a row."
         body="When you're missing two or more adjacent teeth, an implant-supported bridge is more affordable than placing one implant per tooth — and far stronger than a traditional bridge anchored to existing teeth. Two implants support a span of crowns, restoring full bite strength in the area. We plan the placement digitally so the final result fits your bite, your face and your budget."
-        image="/patient-6b871b78.webp"
-        imageAlt="Patient with restored multi-tooth dental implant bridge"
+        image="/smile-warm.webp"
+        imageAlt="Patient eating and smiling freely after implant-supported dental bridge"
         bullets={[
           "Stronger than a traditional tooth-anchored bridge",
           "Preserves bone in the gap — no jaw shrinkage",
@@ -143,8 +143,8 @@ export function Implants() {
         eyebrow="Full-arch (All-on-4)"
         title="A new full set of teeth — fixed in place — in as little as one day."
         body="If you wear dentures, hate dentures, or are facing the loss of an entire upper or lower arch, All-on-4 changes everything. Just four strategically placed implants support a full fixed-in-place set of teeth. They never come out at night, never click while you eat, and never need denture adhesive. Many patients walk out the day of surgery with a working temporary set — and a permanent set follows once healing is complete."
-        image="/implants-diagram.webp"
-        imageAlt="3D rendering of an All-on-4 full-arch dental implant treatment"
+        image="/smile-mature.webp"
+        imageAlt="Mature couple smiling confidently after full-arch All-on-4 dental implants"
         bullets={[
           "Fixed in place — never comes out",
           "Same-day temporaries for many patients",

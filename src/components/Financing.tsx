@@ -66,6 +66,23 @@ export function Financing() {
               </a>
             </div>
           </Reveal>
+
+          {/* Savings highlight card */}
+          <Reveal delay={260}>
+            <div className="mt-8 rounded-2xl bg-[var(--color-primary)] text-white p-6 shadow-2xl">
+              <div className="flex items-baseline gap-2">
+                <span className="text-5xl font-extrabold leading-none text-[var(--color-accent-light)]">0%</span>
+                <span className="text-base font-semibold">interest financing*</span>
+              </div>
+              <p className="mt-2 text-sm text-white/85 leading-relaxed">
+                Qualified patients break treatment into low monthly payments through
+                CareCredit and Sunbit. Most patients pay <span className="font-bold text-white">less per month than their phone bill</span>.
+              </p>
+              <p className="mt-3 text-[11px] text-white/60">
+                *Subject to approval. Ask us for current terms at your free consultation.
+              </p>
+            </div>
+          </Reveal>
         </div>
 
         <div className="lg:col-span-7">
