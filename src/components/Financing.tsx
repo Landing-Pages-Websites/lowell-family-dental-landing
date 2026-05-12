@@ -28,10 +28,8 @@ const POINTS = [
 
 export function Financing() {
   return (
-    <section id="financing" className="relative py-20 sm:py-24 lg:py-28 overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[var(--color-soft-blue-2)] via-white to-[var(--color-soft-blue)]" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+    <section id="financing" className="relative py-20 sm:py-24 lg:py-28 overflow-hidden bg-gradient-to-br from-[var(--color-soft-blue-2)] via-white to-[var(--color-soft-blue)]">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         <div className="lg:col-span-5">
           <Reveal>
             <span className="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-[var(--color-primary)]">

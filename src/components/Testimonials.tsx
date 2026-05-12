@@ -30,15 +30,11 @@ const TESTIMONIALS = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="relative py-20 sm:py-24 lg:py-28 overflow-hidden">
-      {/* Dark gradient background for visual variety */}
+    <section id="testimonials" className="relative py-20 sm:py-24 lg:py-28 overflow-hidden bg-gradient-to-br from-[#0E2858] via-[var(--color-primary-dark)] to-[#0E2858]">
+      {/* Decorative pattern overlay */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-[#0E2858] via-[var(--color-primary-dark)] to-[#0E2858]"
-      />
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 opacity-[0.05]"
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
         style={{
           backgroundImage:
             "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.5) 1px, transparent 0)",
@@ -47,11 +43,11 @@ export function Testimonials() {
       />
       <div
         aria-hidden
-        className="absolute -top-40 -right-32 w-[520px] h-[520px] rounded-full opacity-25 -z-10"
+        className="absolute -top-40 -right-32 w-[520px] h-[520px] rounded-full opacity-25 pointer-events-none"
         style={{ background: "radial-gradient(closest-side, rgba(231,116,0,0.55), transparent 70%)" }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div className="max-w-3xl mx-auto text-center text-white">
           <Reveal>
             <span className="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-[var(--color-accent-light)]">

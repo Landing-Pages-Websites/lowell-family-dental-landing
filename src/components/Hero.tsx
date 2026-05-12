@@ -9,15 +9,12 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 overflow-hidden"
+      className="relative pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 overflow-hidden bg-gradient-to-br from-[var(--color-primary-dark)] via-[var(--color-primary)] to-[#1a3a78]"
     >
-      {/* Background: deep brand gradient with photo overlay on the left */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[var(--color-primary-dark)] via-[var(--color-primary)] to-[#1a3a78]" />
-
-      {/* Decorative pattern */}
+      {/* Decorative pattern overlay */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 opacity-[0.07]"
+        className="absolute inset-0 opacity-[0.07] pointer-events-none"
         style={{
           backgroundImage:
             "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.5) 1px, transparent 0)",
@@ -28,14 +25,14 @@ export function Hero() {
       {/* Accent glow */}
       <div
         aria-hidden
-        className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full opacity-25 -z-10"
+        className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full opacity-25 pointer-events-none"
         style={{
           background:
             "radial-gradient(closest-side, rgba(231,116,0,0.55), transparent 70%)",
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left: copy column — over the gradient, light text */}
         <div className="lg:col-span-7 text-white">
           <Reveal variant="up">

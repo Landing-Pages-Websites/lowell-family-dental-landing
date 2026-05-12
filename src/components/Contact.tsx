@@ -6,14 +6,10 @@ import { ADDRESS_LINE1, ADDRESS_LINE2, HOURS, PHONE, PHONE_HREF } from "./Brand"
 
 export function Contact() {
   return (
-    <section id="contact" className="relative py-20 sm:py-24 lg:py-28 overflow-hidden">
+    <section id="contact" className="relative py-20 sm:py-24 lg:py-28 overflow-hidden bg-gradient-to-br from-[var(--color-primary)] via-[#1a3a78] to-[var(--color-primary-dark)]">
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-[var(--color-primary)] via-[#1a3a78] to-[var(--color-primary-dark)]"
-      />
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 opacity-[0.06]"
+        className="absolute inset-0 opacity-[0.06] pointer-events-none"
         style={{
           backgroundImage:
             "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.6) 1px, transparent 0)",
@@ -21,7 +17,7 @@ export function Contact() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
         <div className="lg:col-span-6 text-white">
           <Reveal>
             <span className="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-[var(--color-accent-light)]">
