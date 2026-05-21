@@ -11,7 +11,7 @@ const FAQS = [
   },
   {
     q: "Does the procedure hurt?",
-    a: "Modern implant placement is far more comfortable than most patients expect. We numb the area thoroughly, and we offer multiple sedation options — from oral relaxation to full IV sedation — for patients who'd rather not be aware during the procedure. Most patients report mild soreness for a day or two, easily managed with over-the-counter medication.",
+    a: "Modern implant placement is far more comfortable than most patients expect. We numb the area thoroughly, and we offer oral sedation so you can relax through the entire procedure. Most patients report mild soreness for a day or two, easily managed with over-the-counter medication.",
   },
   {
     q: "How long does the whole process take?",
@@ -19,14 +19,14 @@ const FAQS = [
   },
   {
     q: "Will my insurance cover dental implants?",
-    a: "Many plans, including Blue Cross Blue Shield and other major carriers, now cover at least a portion of implant treatment. We accept most insurances and our team handles all the paperwork to maximize what your plan will pay. Whatever isn't covered can usually be financed at 0% interest.",
+    a: "Most insurance is accepted, including Blue Cross Blue Shield, Delta Dental, Aetna, MetLife and other major plans. Many of these now cover at least a portion of implant treatment. Our team handles all the paperwork to maximize what your plan will pay, and whatever isn't covered can usually be financed at 0% interest.",
   },
   {
     q: "How do I know if I'm a good candidate for implants?",
     a: "The honest answer is: most adults are. The handful of factors that affect candidacy — bone density, gum health, certain medical conditions — are all things we evaluate at your free 3D CT scan consultation. Even patients who've been told elsewhere they 'don't have enough bone' often have great options when we look at their CT scan.",
   },
   {
-    q: "Why a board-certified specialist instead of a general dentist?",
+    q: "Why a board-certified specialist?",
     a: "Many general dentists place implants, but the long-term success of an implant comes down to surgical precision, prosthetic planning, and case selection — areas where a board-certified specialist has thousands more hours of focused training. Dr. Gammas does this every day. That's why patients drive in from all over Massachusetts to have their implants done here.",
   },
 ];

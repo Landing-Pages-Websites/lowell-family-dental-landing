@@ -13,8 +13,8 @@ export const HOURS = [
   ["Tuesday", "8:00 AM – 6:00 PM"],
   ["Wednesday", "8:00 AM – 5:00 PM"],
   ["Thursday", "8:00 AM – 5:30 PM"],
-  ["Friday", "8:00 AM – 2:00 PM"],
-  ["Saturday", "8:00 AM – 3:00 PM"],
+  ["Friday", "By appointment only"],
+  ["Saturday", "8:00 AM – 2:00 PM"],
   ["Sunday", "Closed"],
 ] as const;
 

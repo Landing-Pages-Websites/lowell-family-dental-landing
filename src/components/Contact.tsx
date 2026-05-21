@@ -32,8 +32,8 @@ export function Contact() {
           <Reveal delay={140}>
             <p className="mt-5 text-lg text-white/85 leading-relaxed">
               Tell us a little about your timeline and we&rsquo;ll call you back to schedule.
-              You&rsquo;ll meet Dr. Gammas, get a 3D CT scan of your jaw, and walk out with a
-              clear plan and a written quote — no pressure, no hidden fees.
+              You&rsquo;ll meet Dr. Gammas and his team, get a 3D CT scan of your jaw, and walk
+              out with a clear plan and a written quote — no pressure, no hidden fees.
             </p>
           </Reveal>
 
@@ -59,7 +59,7 @@ export function Contact() {
               </div>
               <div className="rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 p-5">
                 <div className="text-xs font-bold tracking-widest uppercase text-[var(--color-accent-light)]">
-                  Call us
+                  Contact us
                 </div>
                 <a
                   href={PHONE_HREF}
@@ -67,9 +67,12 @@ export function Contact() {
                 >
                   {PHONE}
                 </a>
-                <div className="text-white/80 text-sm mt-1">
-                  We answer 7 days a week.
-                </div>
+                <a
+                  href="mailto:lowellfamilydentalpractice@gmail.com"
+                  className="mt-2 block text-sm sm:text-[15px] font-semibold text-white/90 hover:underline break-all"
+                >
+                  lowellfamilydentalpractice@gmail.com
+                </a>
               </div>
             </div>
           </Reveal>

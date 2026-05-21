@@ -73,15 +73,6 @@ export function WhyImplants() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-primary)]/15 to-transparent" />
               </div>
-              {/* Floating overlap card */}
-              <div className="absolute -bottom-6 -right-4 sm:-bottom-7 sm:-right-6 bg-[var(--color-primary)] text-white rounded-2xl px-5 py-4 shadow-xl max-w-[240px]">
-                <div className="text-xs font-bold uppercase tracking-widest text-[var(--color-accent-light)]">
-                  Lowell, MA
-                </div>
-                <div className="mt-1 text-base font-bold leading-snug">
-                  Implant-focused care since 1995.
-                </div>
-              </div>
             </div>
           </Reveal>
 

@@ -6,6 +6,7 @@ import { PHONE, PHONE_HREF } from "./Brand";
 
 const CREDENTIALS = [
   "Board-Certified Implant Specialist",
+  "10,000+ implants placed",
   "Doctor of Dental Surgery (DDS)",
   "Advanced Surgical &amp; Prosthetic Implant Training",
   "Active Member, American Dental Association",
@@ -59,6 +60,16 @@ export function Doctor() {
             <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--color-text)] leading-[1.1]">
               Dr. Iham Gammas, board-certified implant specialist.
             </h2>
+          </Reveal>
+          <Reveal delay={170}>
+            <div className="mt-5 inline-flex items-center gap-3 rounded-2xl bg-white border border-[var(--color-border)] px-4 py-3 shadow-sm">
+              <div className="text-3xl sm:text-4xl font-extrabold text-[var(--color-primary)] leading-none">
+                10,000+
+              </div>
+              <div className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] leading-tight">
+                Implants placed
+              </div>
+            </div>
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-5 text-lg text-[var(--color-text-muted)] leading-relaxed">

@@ -31,7 +31,7 @@ const FEATURES = [
   {
     title: "Sedation for anxious patients",
     body:
-      "Dental anxiety is real and we get it. We offer multiple levels of sedation — from oral relaxation to IV sedation — so you can relax through the entire procedure. Most patients tell us afterward they don't remember a thing.",
+      "Dental anxiety is real and we get it. We offer oral sedation so you can relax through the entire procedure. Most patients tell us afterward the appointment went by far easier than they expected.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M12 2C8 8 8 14 12 22M12 2c4 6 4 12 0 20" strokeLinecap="round" />
@@ -95,8 +95,8 @@ export function Technology() {
               <p className="mt-4 text-lg text-white/85 leading-relaxed">
                 Most general dentists eyeball implant placement. We don&rsquo;t. Every implant we
                 place is digitally planned from a 3D CT scan, executed with a custom surgical
-                guide, and supported by sedation options for patients who&rsquo;d rather not feel
-                a thing. This is what &ldquo;stress-free&rdquo; actually looks like.
+                guide, and supported by oral sedation for patients who&rsquo;d rather relax
+                through the entire procedure. This is what &ldquo;stress-free&rdquo; actually looks like.
               </p>
             </Reveal>
           </div>

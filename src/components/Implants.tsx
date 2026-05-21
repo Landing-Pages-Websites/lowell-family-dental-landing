@@ -141,8 +141,8 @@ export function Implants() {
       <ImplantType
         id="full-arch-implant"
         eyebrow="Full-arch (All-on-4)"
-        title="A new full set of teeth — fixed in place — in as little as one day."
-        body="If you wear dentures, hate dentures, or are facing the loss of an entire upper or lower arch, All-on-4 changes everything. Just four strategically placed implants support a full fixed-in-place set of teeth. They never come out at night, never click while you eat, and never need denture adhesive. Many patients walk out the day of surgery with a working temporary set — and a permanent set follows once healing is complete."
+        title="Get a full set of new teeth fixed in place."
+        body="If you wear dentures, hate dentures, or are facing the loss of an entire upper or lower arch, All-on-4 changes everything. Just four strategically placed implants support a full fixed-in-place set of teeth. They never come out at night, never click while you eat, and never need denture adhesive. A permanent set follows once healing is complete, and our team plans the timeline with you at your consultation."
         image="/patient-511d661e.webp"
         imageAlt="Patient smiling confidently after full-arch All-on-4 dental implants"
         bullets={[

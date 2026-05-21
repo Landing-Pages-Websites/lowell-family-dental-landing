@@ -17,7 +17,7 @@ const POINTS = [
   {
     title: "Most insurances accepted",
     body:
-      "Including Blue Cross Blue Shield and other major plans. Our team handles the paperwork so you can focus on your smile, not your inbox.",
+      "Most insurance is accepted, including Blue Cross Blue Shield, Delta Dental, Aetna, MetLife and other major plans. Our team handles the paperwork so you can focus on your smile, not your inbox.",
   },
   {
     title: "Exclusive new-patient discounts",

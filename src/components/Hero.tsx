@@ -59,7 +59,7 @@ export function Hero() {
               {[
                 "Single, multi-tooth & full-arch (All-on-4)",
                 "Sedation options for anxious patients",
-                "Most insurances accepted, including BCBS",
+                "BCBS, Delta Dental, Aetna, MetLife & other major plans",
                 "Stress-free, no-pressure consultation",
               ].map((line) => (
                 <li
@@ -105,7 +105,7 @@ export function Hero() {
               <span aria-hidden className="hidden sm:block w-px h-4 bg-white/30" />
               <span className="font-medium">133 Market St., Lowell, MA</span>
               <span aria-hidden className="hidden sm:block w-px h-4 bg-white/30" />
-              <span className="font-medium">BCBS &amp; major insurances accepted</span>
+              <span className="font-medium">BCBS, Delta Dental, Aetna, MetLife &amp; more</span>
             </div>
           </Reveal>
         </div>
