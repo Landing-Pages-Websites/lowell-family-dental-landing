@@ -15,6 +15,8 @@ interface LeadFormProps {
   headline?: string;
   /** Optional subheadline override */
   subhead?: string;
+  /** Override the default source_provider — used to attribute leads per route. */
+  sourceProvider?: string;
 }
 
 interface FormData {
@@ -37,11 +39,12 @@ export function LeadForm({
   variant = "hero",
   headline,
   subhead,
+  sourceProvider,
 }: LeadFormProps) {
   const { status, errorMessage, submitLead } = useMegaLeadForm({
     customerId: CUSTOMER_ID,
     siteId: SITE_ID,
-    sourceProvider: SOURCE_PROVIDER,
+    sourceProvider: sourceProvider || SOURCE_PROVIDER,
   });
 
   const [data, setData] = useState<FormData>(initial);
