@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Reveal } from "../Reveal";
 import { PHONE, PHONE_HREF } from "../Brand";
 
@@ -77,33 +78,58 @@ export function WhyFamilies() {
   return (
     <section
       id="why"
-      className="relative py-20 sm:py-24 lg:py-28 bg-white"
+      className="relative py-20 sm:py-24 lg:py-28 bg-[var(--color-soft-blue)]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="max-w-2xl">
-          <Reveal>
-            <span className="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-[var(--color-primary)]">
-              Why Lowell Families Choose Us
-            </span>
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <Reveal variant="left" className="lg:col-span-6">
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[5/4]">
+                <Image
+                  src="/family-group.webp"
+                  alt="Three generations of a family smiling together — kids, parents and grandparents all welcome at Lowell Family Dental Practice"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-primary)]/15 to-transparent" />
+              </div>
+              <div className="absolute -bottom-6 -right-4 sm:-bottom-7 sm:-right-6 bg-[var(--color-primary)] text-white rounded-2xl px-5 py-4 shadow-xl max-w-[260px]">
+                <div className="text-xs font-bold uppercase tracking-widest text-[var(--color-accent-light)]">
+                  All ages welcome
+                </div>
+                <div className="mt-1 text-base font-bold leading-snug">
+                  From toddlers to grandparents &mdash; one trusted office for everyone.
+                </div>
+              </div>
+            </div>
           </Reveal>
-          <Reveal delay={80}>
-            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--color-text)] leading-[1.1]">
-              The dentist your whole family actually looks forward to.
-            </h2>
-          </Reveal>
-          <Reveal delay={140}>
-            <p className="mt-4 text-lg text-[var(--color-text-muted)] leading-relaxed">
-              We&rsquo;ve cared for Lowell families for over 30 years. Here&rsquo;s why
-              new patients keep choosing us — and bringing their kids, parents and friends.
-            </p>
-          </Reveal>
+
+          <div className="lg:col-span-6">
+            <Reveal>
+              <span className="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-[var(--color-primary)]">
+                Why Lowell Families Choose Us
+              </span>
+            </Reveal>
+            <Reveal delay={80}>
+              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--color-text)] leading-[1.1]">
+                The dentist your whole family actually looks forward to.
+              </h2>
+            </Reveal>
+            <Reveal delay={140}>
+              <p className="mt-4 text-lg text-[var(--color-text-muted)] leading-relaxed">
+                We&rsquo;ve cared for Lowell families for over 30 years. Here&rsquo;s why
+                new patients keep choosing us &mdash; and bringing their kids, parents and friends.
+              </p>
+            </Reveal>
+          </div>
         </div>
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {REASONS.map((r, i) => (
             <Reveal key={r.title} delay={100 + i * 60}>
-              <div className="h-full bg-[var(--color-soft-blue)] rounded-2xl p-6 sm:p-7 border border-transparent hover:border-[var(--color-primary)]/30 transition-all">
-                <div className="w-11 h-11 rounded-xl bg-white text-[var(--color-primary)] flex items-center justify-center shadow-sm">
+              <div className="h-full bg-white rounded-2xl p-6 sm:p-7 border border-[var(--color-border)] hover:border-[var(--color-primary)]/30 hover:shadow-lg transition-all">
+                <div className="w-11 h-11 rounded-xl bg-[var(--color-soft-blue)] text-[var(--color-primary)] flex items-center justify-center">
                   <span className="w-5 h-5">{r.icon}</span>
                 </div>
                 <h3

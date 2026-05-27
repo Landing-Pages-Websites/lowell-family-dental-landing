@@ -50,7 +50,7 @@ export default function NewPatientsPage() {
       </noscript>
 
       <QueryParamPersistence />
-      <Header />
+      <Header tone="dark" />
       <HeroNP />
       <StatsNP />
       <Services />

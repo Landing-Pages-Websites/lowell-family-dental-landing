@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Reveal } from "../Reveal";
 import { PHONE, PHONE_HREF } from "../Brand";
 
@@ -77,22 +78,36 @@ export function Services() {
   return (
     <section id="services" className="relative py-20 sm:py-24 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="max-w-2xl">
-          <Reveal>
-            <span className="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-[var(--color-primary)]">
-              Family Dental Services
-            </span>
-          </Reveal>
-          <Reveal delay={80}>
-            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--color-text)] leading-[1.1]">
-              Everything your family needs — under one roof.
-            </h2>
-          </Reveal>
-          <Reveal delay={140}>
-            <p className="mt-4 text-lg text-[var(--color-text-muted)] leading-relaxed">
-              From a 6-month cleaning to a same-day crown, you don&rsquo;t need a different
-              office for each visit. Here&rsquo;s what we handle in-house for new patients.
-            </p>
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6">
+            <Reveal>
+              <span className="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-[var(--color-primary)]">
+                Family Dental Services
+              </span>
+            </Reveal>
+            <Reveal delay={80}>
+              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--color-text)] leading-[1.1]">
+                Everything your family needs &mdash; under one roof.
+              </h2>
+            </Reveal>
+            <Reveal delay={140}>
+              <p className="mt-4 text-lg text-[var(--color-text-muted)] leading-relaxed">
+                From a 6-month cleaning to a same-day crown, you don&rsquo;t need a different
+                office for each visit. Here&rsquo;s what we handle in-house for new patients.
+              </p>
+            </Reveal>
+          </div>
+          <Reveal variant="right" delay={120} className="lg:col-span-6">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[5/4] lg:aspect-[6/5]">
+              <Image
+                src="/family-mom-child.webp"
+                alt="Mother and young daughter smiling together — Lowell Family Dental Practice serves every age"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-primary)]/10 to-transparent" />
+            </div>
           </Reveal>
         </div>
 
