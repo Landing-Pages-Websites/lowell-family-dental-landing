@@ -38,7 +38,7 @@ export function Hero() {
           <Reveal variant="up">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 backdrop-blur px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white">
               <span className="w-2 h-2 rounded-full bg-[var(--color-accent)]" />
-              Lowell, MA · Board-Certified Implant Center
+              Lowell, MA · Board Certified Dental Implant Specialist
             </span>
           </Reveal>
           <Reveal variant="up" delay={80}>
@@ -49,15 +49,15 @@ export function Hero() {
           </Reveal>
           <Reveal variant="up" delay={160}>
             <p className="mt-5 text-lg sm:text-xl text-white/90 max-w-2xl leading-relaxed">
-              Board-certified implant specialist. 3D CT-guided precision.
+              Board Certified Dental Implant Specialist. 3D CT-guided precision.
               Flexible financing and exclusive new-patient discounts. Eat, smile and
-              laugh again — without dentures, without embarrassment, without the run-around.
+              laugh again — without floppy dentures, without embarrassment, without the run-around.
             </p>
           </Reveal>
           <Reveal variant="up" delay={220}>
             <ul className="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 max-w-xl">
               {[
-                "Single, multi-tooth & full-arch (All-on-4)",
+                "Single, snap-on dentures & fixed full-arch (All-on-X)",
                 "Sedation options for anxious patients",
                 "BCBS, Delta Dental, Aetna, MetLife & other major plans",
                 "Stress-free, no-pressure consultation",
@@ -100,7 +100,7 @@ export function Hero() {
               <div className="flex items-center gap-2">
                 <Stars />
                 <span className="font-semibold text-white">4.9</span>
-                <span>(200+ patient reviews)</span>
+                <span>(900+ patient reviews)</span>
               </div>
               <span aria-hidden className="hidden sm:block w-px h-4 bg-white/30" />
               <span className="font-medium">133 Market St., Lowell, MA</span>

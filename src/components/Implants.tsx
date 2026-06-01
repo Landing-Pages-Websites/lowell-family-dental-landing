@@ -12,6 +12,10 @@ interface ImplantTypeProps {
   image: string;
   imageAlt: string;
   bullets: string[];
+  oldPrice: string;
+  price: string;
+  priceUnit: string;
+  priceNote: string;
   reverse?: boolean;
 }
 
@@ -23,21 +27,25 @@ function ImplantType({
   image,
   imageAlt,
   bullets,
+  oldPrice,
+  price,
+  priceUnit,
+  priceNote,
   reverse,
 }: ImplantTypeProps) {
   return (
     <section id={id} className="py-16 sm:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
         <Reveal variant={reverse ? "right" : "left"} className={reverse ? "lg:order-2" : ""}>
-          <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]">
+          <div className="relative rounded-3xl overflow-hidden shadow-xl bg-[var(--color-soft-blue)] aspect-[4/3] flex items-center justify-center p-6 sm:p-8">
             <Image
               src={image}
               alt={imageAlt}
-              fill
+              width={1100}
+              height={825}
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="w-full h-full object-contain"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-primary)]/15 to-transparent" />
           </div>
         </Reveal>
         <Reveal variant={reverse ? "left" : "right"} delay={80}>
@@ -64,6 +72,28 @@ function ImplantType({
               </li>
             ))}
           </ul>
+
+          {/* Pricing — original crossed out, promo price larger below */}
+          <div className="mt-7 inline-flex flex-col rounded-2xl bg-white border border-[var(--color-border)] px-6 py-5 shadow-sm">
+            <div className="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
+              {priceNote}
+            </div>
+            <div className="mt-1.5 text-lg font-medium text-[var(--color-text-muted)] line-through decoration-2">
+              {oldPrice}
+            </div>
+            <div className="flex items-baseline gap-2 leading-none">
+              <span className="text-4xl sm:text-5xl font-extrabold text-[var(--color-primary)]">
+                {price}
+              </span>
+              <span className="text-base sm:text-lg font-semibold text-[var(--color-text-muted)]">
+                {priceUnit}
+              </span>
+            </div>
+            <div className="mt-2 text-xs text-[var(--color-text-muted)]">
+              *Cost depends on actual treatment plan
+            </div>
+          </div>
+
           <div className="mt-7 flex flex-wrap items-center gap-4">
             <a href="#contact" className="btn-primary">
               Book Free Consultation
@@ -99,9 +129,9 @@ export function Implants() {
           </Reveal>
           <Reveal delay={140}>
             <p className="mt-4 text-lg text-[var(--color-text-muted)]">
-              Whether you&rsquo;re missing one tooth, several teeth, or a whole arch, our
-              board-certified specialist designs a treatment plan based on a 3D CT scan of
-              your jaw — not a one-size-fits-all template.
+              Whether you&rsquo;re missing one tooth, want a more stable removable option, or
+              need a whole arch, our Board Certified Dental Implant Specialist designs a
+              treatment plan based on a 3D CT scan of your jaw — not a one-size-fits-all template.
             </p>
           </Reveal>
         </div>
@@ -109,48 +139,60 @@ export function Implants() {
 
       <ImplantType
         id="single-tooth-implant"
-        eyebrow="Single tooth"
+        eyebrow="Single implants"
         title="Replace one missing tooth — without touching the healthy ones beside it."
-        body="When a tooth is lost or fails, a single implant is the gold-standard fix: a titanium post placed in the jaw, topped with a custom-shaded ceramic crown. Unlike a bridge, it doesn't require grinding down the neighboring teeth, and unlike a partial denture, it stays put when you eat. From start to finished crown, most patients are back to normal in 3–4 months."
-        image="/patient-919ed506.webp"
-        imageAlt="Patient smiling confidently after a single dental implant in Lowell"
+        body="When a tooth is lost or fails, a single implant is the gold-standard fix: a titanium post placed in the jaw, topped with a custom-shaded ceramic crown. Unlike a bridge, it doesn't require grinding down the neighboring teeth, and unlike a partial floppy denture, it stays put when you eat. From start to finished crown, most patients are back to normal in 3–4 months."
+        image="/diagram-single.webp"
+        imageAlt="Diagram of a single dental implant — titanium post, abutment, and ceramic crown"
         bullets={[
           "Looks identical to your other teeth",
           "Doesn't damage adjacent teeth (unlike a bridge)",
           "Cleaned exactly like a natural tooth — no special routine",
           "Lasts 25+ years with proper care",
         ]}
+        oldPrice="$5,200"
+        price="$3,499"
+        priceUnit="/ tooth"
+        priceNote="Implant + Abutment + Crown"
       />
 
       <ImplantType
-        id="multi-tooth-implant"
-        eyebrow="Multiple teeth"
-        title="Implant-supported bridges for two or more missing teeth in a row."
-        body="When you're missing two or more adjacent teeth, an implant-supported bridge is more affordable than placing one implant per tooth — and far stronger than a traditional bridge anchored to existing teeth. Two implants support a span of crowns, restoring full bite strength in the area. We plan the placement digitally so the final result fits your bite, your face and your budget."
-        image="/patient-6b871b78.webp"
-        imageAlt="Patient smiling confidently after implant-supported dental bridge"
+        id="snap-on-dentures"
+        eyebrow="Snap-on dentures"
+        title="Implant-retained overdentures that snap securely into place."
+        body="If you wear floppy dentures, struggle with loose teeth, or want more stability without a full fixed bridge, snap-on dentures offer a comfortable middle ground. Two to four dental implants are placed in the jaw and connected to a removable denture that securely snaps into place. Unlike traditional dentures, they stay stable while eating and speaking — yet can still be removed easily for cleaning."
+        image="/diagram-snapon.webp"
+        imageAlt="Diagram of a snap-on overdenture retained by dental implants"
         bullets={[
-          "Stronger than a traditional tooth-anchored bridge",
-          "Preserves bone in the gap — no jaw shrinkage",
-          "Fewer implants than one-per-tooth approach",
-          "Predictable, dentist-controlled cost",
+          "More stable than traditional dentures",
+          "Snaps securely onto implants — less slipping or movement",
+          "Helps preserve jawbone and facial structure",
+          "Improved chewing power and everyday comfort",
         ]}
+        oldPrice="$19,000"
+        price="$14,000"
+        priceUnit="/ arch"
+        priceNote="Implants + Prosthetics"
         reverse
       />
 
       <ImplantType
         id="full-arch-implant"
-        eyebrow="Full-arch (All-on-4)"
+        eyebrow="Fixed full arch (All-on-X)"
         title="Get a full set of new teeth fixed in place."
-        body="If you wear dentures, hate dentures, or are facing the loss of an entire upper or lower arch, All-on-4 changes everything. Just four strategically placed implants support a full fixed-in-place set of teeth. They never come out at night, never click while you eat, and never need denture adhesive. A permanent set follows once healing is complete, and our team plans the timeline with you at your consultation."
-        image="/patient-511d661e.webp"
-        imageAlt="Patient smiling confidently after full-arch All-on-4 dental implants"
+        body="If you wear floppy dentures, hate dentures, or are facing the loss of an entire upper or lower arch, All-on-X changes everything. Strategically placed implants support a full fixed-in-place set of teeth. They never come out at night, never click while you eat, and never need denture adhesive. A permanent set follows once healing is complete, and our team plans the timeline with you at your consultation."
+        image="/diagram-fixedarch.webp"
+        imageAlt="Diagram of a fixed full-arch All-on-X dental implant restoration"
         bullets={[
           "Fixed in place — never comes out",
-          "Same-day temporaries for many patients",
           "Eat steak, apples, corn — anything",
           "Eliminates denture adhesive forever",
+          "Restores full bite strength across the arch",
         ]}
+        oldPrice="$30,000"
+        price="$22,000"
+        priceUnit="/ arch"
+        priceNote="Implants + Prosthetics"
       />
     </>
   );

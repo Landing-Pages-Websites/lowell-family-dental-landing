@@ -24,11 +24,11 @@ export default function LowellFamilyDentalPage() {
       <QueryParamPersistence />
       <Header />
       <Hero />
+      <Doctor />
       <WhyImplants />
       <Implants />
       <Technology />
       <Financing />
-      <Doctor />
       <Testimonials />
       <FAQ />
       <Contact />

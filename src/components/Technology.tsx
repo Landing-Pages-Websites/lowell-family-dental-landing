@@ -40,9 +40,9 @@ const FEATURES = [
     ),
   },
   {
-    title: "Same-day temporary teeth",
+    title: "Latest Technology",
     body:
-      "For full-arch (All-on-4) cases, you walk out of surgery with a temporary set of fixed teeth that look natural and let you eat soft foods immediately. The final, permanent set follows once your jaw has fully healed.",
+      "We invest in advanced dental technology for more comfortable, precise, and efficient care. Using intraoral scanners, digital radiographs, and low-dose 3D cone beam imaging, we diagnose accurately and plan digitally. This ensures predictable results, greater comfort, and fewer surprises throughout your treatment.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
         <circle cx="12" cy="12" r="9" />

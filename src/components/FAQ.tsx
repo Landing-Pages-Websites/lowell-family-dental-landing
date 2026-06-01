@@ -7,7 +7,7 @@ import { PHONE, PHONE_HREF } from "./Brand";
 const FAQS = [
   {
     q: "How much do dental implants cost in Lowell?",
-    a: "Implant costs vary based on the number of teeth being replaced, whether you need bone grafting, and which type of crown or bridge is placed on top. We provide a written, all-inclusive treatment plan after your free consultation — no surprise add-ons. Most single implants land in the typical range you'll see online; full-arch (All-on-4) is dramatically less per tooth than placing implants individually. We also offer 0% financing on qualifying treatment plans.",
+    a: "Implant costs vary based on the number of teeth being replaced, whether you need bone grafting, and which type of crown or bridge is placed on top. We provide a written, all-inclusive treatment plan after your free consultation — no surprise add-ons. Most single implants land in the typical range you'll see online; full-arch (All-on-X) is dramatically less per tooth than placing implants individually. We also offer 0% financing on qualifying treatment plans.",
   },
   {
     q: "Does the procedure hurt?",
@@ -15,11 +15,11 @@ const FAQS = [
   },
   {
     q: "How long does the whole process take?",
-    a: "From consultation to final crown, single implants usually take 3–4 months — most of that time is the implant fusing with your jawbone. Full-arch (All-on-4) cases often have a same-day temporary set of fixed teeth, with the permanent set delivered after 3–4 months of healing. We'll map out your exact timeline at the consultation.",
+    a: "From consultation to final crown, single implants usually take 3–4 months — most of that time is the implant fusing with your jawbone. Full Arch (All-on-X) cases can be delivered within four to six months. We'll map out your approximate timeline at the consultation.",
   },
   {
     q: "Will my insurance cover dental implants?",
-    a: "Most insurance is accepted, including Blue Cross Blue Shield, Delta Dental, Aetna, MetLife and other major plans. Many of these now cover at least a portion of implant treatment. Our team handles all the paperwork to maximize what your plan will pay, and whatever isn't covered can usually be financed at 0% interest.",
+    a: "Most insurance is accepted, including Blue Cross Blue Shield, Delta Dental, Aetna, MetLife and other major plans. Many of these now cover at least a portion of implant treatment. Our team handles all the paperwork to maximize what your plan will pay, and whatever isn't covered can sometimes be financed at 0% interest, depending on treatment plan and eligibility.",
   },
   {
     q: "How do I know if I'm a good candidate for implants?",

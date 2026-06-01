@@ -6,7 +6,7 @@ import { Reveal } from "./Reveal";
 const STATS = [
   { value: "30+", label: "Years serving Lowell" },
   { value: "98%", label: "Implant success rate" },
-  { value: "4.9/5", label: "Patient rating · 200+ reviews" },
+  { value: "4.9/5", label: "Patient rating · 900+ reviews" },
   { value: "Same week", label: "Consultations available" },
 ];
 
@@ -14,7 +14,7 @@ const REASONS = [
   {
     title: "Eat anything, again.",
     body:
-      "Implants restore 90%+ of natural bite force — so steak, apples and corn on the cob are back on the menu. Dentures and bridges can't match it.",
+      "Implants restore 90%+ of natural bite force — so steak, apples and corn on the cob are back on the menu. Floppy dentures and bridges can't match it.",
   },
   {
     title: "They look exactly like your teeth.",
@@ -29,7 +29,7 @@ const REASONS = [
   {
     title: "They last decades, not years.",
     body:
-      "With proper care, an implant is a once-in-a-lifetime fix. Bridges and dentures need replacing every 5–10 years. Implants pay for themselves.",
+      "With proper care, an implant is a once-in-a-lifetime fix. Bridges and floppy dentures need replacing every 5–10 years. Implants pay for themselves.",
   },
 ];
 
@@ -90,9 +90,9 @@ export function WhyImplants() {
             </Reveal>
             <Reveal delay={140}>
               <p className="mt-4 text-lg text-[var(--color-text-muted)] leading-relaxed">
-                Whether you&rsquo;re missing a single tooth or struggling with loose dentures,
+                Whether you&rsquo;re missing a single tooth or struggling with loose, floppy dentures,
                 modern dental implants are the closest thing to growing your real teeth back.
-                Here&rsquo;s why patients in Lowell trust us with one of the most important
+                Here&rsquo;s why patients trust us with one of the most important
                 decisions they&rsquo;ll make for their health.
               </p>
             </Reveal>

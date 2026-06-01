@@ -1,0 +1,103 @@
+{
+  "_note": "Provenance for content used on the Lowell Family Dental Practice dental implant LP. Round 2 edits (2026-06-01) added Dr. Gammas verified bio/credentials, real designation logos, and customer-supplied implant diagrams + pricing from the AM-provided MEGA Drive folder.",
+  "testimonials": [
+    {
+      "name": "Maria L.",
+      "text": "All-on-X full arch — pre-existing testimonial carried over from Round 1 build. Patient initials only per practice privacy preference.",
+      "source": "Carried from Round 1 LP build (not altered this round except procedure label All-on-4 -> All-on-X)",
+      "verified_at": "2026-06-01",
+      "extraction_method": "existing-repo-content"
+    },
+    {
+      "name": "Jeff R.",
+      "text": "Single tooth implant — pre-existing testimonial carried over from Round 1 build.",
+      "source": "Carried from Round 1 LP build",
+      "verified_at": "2026-06-01",
+      "extraction_method": "existing-repo-content"
+    },
+    {
+      "name": "Patricia K.",
+      "text": "Multi-tooth bridge — pre-existing testimonial carried over from Round 1 build.",
+      "source": "Carried from Round 1 LP build",
+      "verified_at": "2026-06-01",
+      "extraction_method": "existing-repo-content"
+    }
+  ],
+  "stats": [
+    {
+      "claim": "Dr. Iham Gammas, DMD, DABOI, Implantologist — Diplomate of the American Board of Oral Implantology",
+      "source": "Spec input_data (customer-supplied) + verified at https://www.aboi.org/diplomate/609/iham-gammas (ABOI Diplomate, member since 2021)",
+      "verified_at": "2026-06-01",
+      "method": "spec-supplied + ABOI directory cross-check"
+    },
+    {
+      "claim": "Examiner for credentialing for the American Academy of Implant Dentistry; Instructor of dental implant surgery; Member of clinical advisory board for various implant companies",
+      "source": "Spec input_data (customer-supplied bio bullets)",
+      "verified_at": "2026-06-01",
+      "method": "spec-supplied"
+    },
+    {
+      "claim": "Pricing: Single implant $3,499/tooth (was $5,200); Snap-on denture $14,000/arch (was $19,000); Fixed full arch (All-on-X) $22,000/arch (was $30,000). Cost depends on actual treatment plan.",
+      "source": "Spec input_data PRICING DISPLAY (customer-supplied promo pricing)",
+      "verified_at": "2026-06-01",
+      "method": "spec-supplied"
+    },
+    {
+      "claim": "900+ reviews / 4.9 rating",
+      "source": "Spec input_data content request #3 (customer-supplied review count update from 200 to 900)",
+      "verified_at": "2026-06-01",
+      "method": "spec-supplied"
+    }
+  ],
+  "licenses": [
+    "DABOI — Diplomate, American Board of Oral Implantology / Implant Dentistry (ABOI member since 2021)"
+  ],
+  "partnerships": [
+    "American Board of Oral Implantology / Implant Dentistry (ABOI/ID) — Diplomate",
+    "American Academy of Implant Dentistry (AAID) — Fellow / credentialing examiner",
+    "International Congress of Oral Implantologists (ICOI)",
+    "Academy of Osseointegration (AOI)",
+    "International Academy of Dental Implantology (IADA)"
+  ],
+  "service_areas": ["Lowell, MA", "Greater Lowell / Massachusetts"],
+  "images": [
+    {
+      "file": "public/gammas-dr.webp",
+      "source": "MEGA Drive folder (AM-supplied): 'Barry Braunstein Photography Headshots Boston - Iham Gammas 03165.jpg'",
+      "usage": "Meet Your Specialist section — replaces prior stock /patient-e286d6f3.webp",
+      "method": "Drive download + PIL crop to 4:5 + UnsharpMask + webp q88"
+    },
+    {
+      "file": "public/diagram-single.webp",
+      "source": "MEGA Drive NEW folder: 'Single Implant.PNG' (customer-supplied)",
+      "usage": "Single implants section diagram",
+      "method": "Drive download + resize 1100w + webp q88"
+    },
+    {
+      "file": "public/diagram-snapon.webp",
+      "source": "MEGA Drive NEW folder: 'Snap On Dentures.PNG' (customer-supplied)",
+      "usage": "Snap-on dentures section diagram (new section)",
+      "method": "Drive download + resize 1100w + webp q88"
+    },
+    {
+      "file": "public/diagram-fixedarch.webp",
+      "source": "MEGA Drive NEW folder: 'Fixed Arch.png' (customer-supplied)",
+      "usage": "Fixed full arch (All-on-X) section diagram",
+      "method": "Drive download + resize 1100w + webp q88"
+    },
+    {
+      "file": "public/badge-aboi.webp, badge-aaid.webp, badge-aoi.webp, badge-iada.webp, badge-icoi.webp",
+      "source": "MEGA Drive 'Designation Logos' subfolder (customer-supplied: ABOI, AAID, AOI, IADA, ICOI)",
+      "usage": "Meet Your Specialist section — credentials & affiliations logo row",
+      "method": "Drive download + white-bg flatten + webp q90"
+    }
+  ],
+  "intentional_removals": [
+    "Removed 'Multiple Teeth' implant-supported bridge section (text + /patient-6b871b78.webp diagram) per spec — replaced by Snap-On Dentures. Final implant lineup: Single Implants, Snap-On Dentures, Fixed Full Arch (All-on-X).",
+    "Removed 'Same-day temporaries for many patients' bullet from full-arch implant solution per spec item #7.",
+    "Replaced 'Same-day temporary teeth' Technology feature with 'Latest Technology' copy per spec item #9.",
+    "Removed 'Just four' phrasing from All-on-X full-arch body per spec item #6.",
+    "Removed geographic restriction 'in Lowell' from WhyImplants intro per spec item #4.",
+    "Replaced prior generic Dr. Gammas credentials (e.g., '10,000+ implants placed', 'Doctor of Dental Surgery (DDS)') with verified DMD/DABOI credentials and the four spec-supplied bio bullets."
+  ]
+}

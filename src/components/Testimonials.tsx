@@ -7,7 +7,7 @@ import { PHONE, PHONE_HREF } from "./Brand";
 const TESTIMONIALS = [
   {
     name: "Maria L.",
-    procedure: "All-on-4 full arch",
+    procedure: "All-on-X full arch",
     avatar: "/avatar-maria.webp",
     body:
       "I cried when I saw myself in the mirror after losing my dentures. Dr. Gammas walked me through every option without pressure. Now I eat steak again. I smile in pictures. I cannot recommend this practice enough.",
@@ -69,7 +69,7 @@ export function Testimonials() {
                 ))}
               </span>
               <span className="font-bold text-white">4.9 / 5</span>
-              <span>· Trusted by 200+ patients in Lowell</span>
+              <span>· Trusted by 900+ patients in Lowell</span>
             </div>
           </Reveal>
         </div>
