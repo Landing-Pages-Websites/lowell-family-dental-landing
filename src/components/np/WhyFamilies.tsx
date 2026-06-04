@@ -63,7 +63,7 @@ const REASONS = [
   {
     title: "Financing &amp; payment plans.",
     body:
-      "Got a big-ticket plan? We offer 0% interest CareCredit and Sunbit financing — so cost doesn&rsquo;t stand between you and your smile.",
+      "Got a big-ticket plan? We offer 0% interest CareCredit and Proceed Finance financing — so cost doesn&rsquo;t stand between you and your smile.",
     icon: (
       <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <rect x="2" y="6" width="20" height="12" rx="2" />

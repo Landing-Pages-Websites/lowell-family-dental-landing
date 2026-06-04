@@ -12,7 +12,7 @@ const POINTS = [
   {
     title: "0% interest financing.",
     body:
-      "CareCredit and Sunbit offer 0% promotional rates so a crown or a deep cleaning never has to wait. Approval in minutes.",
+      "CareCredit and Proceed Finance offer 0% promotional rates so a crown or a deep cleaning never has to wait. Approval in minutes.",
   },
   {
     title: "Transparent pricing.",
