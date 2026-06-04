@@ -12,7 +12,7 @@ const POINTS = [
   {
     title: "0% interest financing options",
     body:
-      "We work with CareCredit, Sunbit and other partners so qualified patients can break treatment into low monthly payments — many with 0% interest.",
+      "We work with CareCredit, Proceed Finance and other partners so qualified patients can break treatment into low monthly payments — many with 0% interest.",
   },
   {
     title: "Most insurances accepted",
@@ -74,7 +74,7 @@ export function Financing() {
               </div>
               <p className="mt-2 text-sm text-white/85 leading-relaxed">
                 Qualified patients break treatment into low monthly payments through
-                CareCredit and Sunbit. Most patients pay <span className="font-bold text-white">less per month than their phone bill</span>.
+                CareCredit and Proceed Finance. Most patients pay <span className="font-bold text-white">less per month than their phone bill</span>.
               </p>
               <p className="mt-3 text-[11px] text-white/60">
                 *Subject to approval. Ask us for current terms at your free consultation.

@@ -68,12 +68,12 @@ export function Doctor() {
           </Reveal>
           <Reveal delay={140}>
             <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--color-text)] leading-[1.1]">
-              Dr. Iham Gammas, DMD, DABOI, Implantologist
+              Dr Iham Gammas, DMD, DABOI
             </h2>
           </Reveal>
           <Reveal delay={170}>
             <p className="mt-3 text-lg font-semibold text-[var(--color-primary)]">
-              Diplomate of the American Board of Oral Implantology
+              Implantologist
             </p>
           </Reveal>
           <Reveal delay={200}>
@@ -88,7 +88,7 @@ export function Doctor() {
           </Reveal>
           <Reveal delay={260}>
             <p className="mt-4 text-lg text-[var(--color-text-muted)] leading-relaxed">
-              Beyond his own practice, Dr. Gammas serves as an examiner for credentialing with
+              Dr Gammas serves as an examiner for credentialing with
               the American Academy of Implant Dentistry, teaches dental implant surgery at
               various institutes, and sits on the clinical advisory board for several implant
               companies — helping shape the standards other dentists are trained to. Patients
