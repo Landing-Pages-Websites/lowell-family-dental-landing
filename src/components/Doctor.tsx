@@ -5,12 +5,16 @@ import { Reveal } from "./Reveal";
 import { PHONE, PHONE_HREF } from "./Brand";
 
 const CREDENTIALS = [
-  "Diplomate of the American Board of Oral Implantology (DABOI)",
+  "American Board of Oral Implantology – Diplomate",
+  "American Academy of Implant Dentistry – Fellow",
+  "International Congress of Oral Implantology - Fellow &amp; Master",
+  "International Academy of Dental Implantology - Fellow &amp; Master",
+  "Academy of Osseointegration",
+  "Member of the Clinical Advisory Board for various dental implant companies",
+  "Placed 10,000+ implants throughout career and counting",
+  "DMD, Boston University School of Dental Medicine (2007)",
   "Examiner for credentialing for the American Academy of Implant Dentistry",
   "Instructor of dental implant surgery at various institutes",
-  "Member of the clinical advisory board for various implant companies",
-  "Doctor of Dental Medicine (DMD)",
-  "Advanced surgical &amp; prosthetic implant training",
 ];
 
 const DESIGNATIONS = [
@@ -76,24 +80,18 @@ export function Doctor() {
               Implantologist
             </p>
           </Reveal>
-          <Reveal delay={200}>
-            <p className="mt-5 text-lg text-[var(--color-text-muted)] leading-relaxed">
-              Dr. Gammas has dedicated his career to one of the most life-changing procedures
-              in modern dentistry: restoring full, confident smiles with dental implants. As a
-              Diplomate of the American Board of Oral Implantology — the highest credential in
-              implant dentistry — he combines advanced surgical and prosthetic training with
-              in-house 3D CT imaging and a fully digital workflow, so your implants are planned
-              to a fraction of a millimeter before he ever picks up an instrument.
+          <Reveal delay={185}>
+            <p className="mt-1 text-sm font-medium text-[var(--color-primary)]/80">
+              Diplomate of the American Board of Oral Implantology
             </p>
           </Reveal>
-          <Reveal delay={260}>
-            <p className="mt-4 text-lg text-[var(--color-text-muted)] leading-relaxed">
-              Dr Gammas serves as an examiner for credentialing with
-              the American Academy of Implant Dentistry, teaches dental implant surgery at
-              various institutes, and sits on the clinical advisory board for several implant
-              companies — helping shape the standards other dentists are trained to. Patients
-              describe him as patient, gentle, and genuinely interested in understanding what
-              they want from their smile.
+          <Reveal delay={200}>
+            <p className="mt-5 text-lg text-[var(--color-text-muted)] leading-relaxed">
+              At Lowell Family Dental Practice, Dr. Iham Gammas is one of the most credentialed
+              dental implant specialists in the Lowell, MA area — with over 10,000 implants placed
+              throughout his career. Patients from Lowell, Chelmsford, Billerica, Dracut, Tewksbury,
+              Nashua NH, and Salem NH trust Dr. Gammas for his unmatched expertise and personalized
+              care. His credentials include:
             </p>
           </Reveal>
 
