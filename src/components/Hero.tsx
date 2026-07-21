@@ -108,6 +108,28 @@ export function Hero() {
               <span className="font-medium">BCBS, Delta Dental, Aetna, MetLife &amp; more</span>
             </div>
           </Reveal>
+          <Reveal variant="up" delay={460}>
+            {/* Promo price callout — mirrors the below-fold single-tooth block, adapted for the dark hero */}
+            <div className="mt-7 inline-flex flex-col rounded-2xl bg-white/95 backdrop-blur px-5 py-4 shadow-xl ring-1 ring-white/50">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
+                Implant + Abutment + Crown
+              </div>
+              <div className="mt-1 flex items-baseline gap-2.5">
+                <span className="text-base font-medium text-[var(--color-text-muted)] line-through decoration-2">
+                  $5,200
+                </span>
+                <span className="text-4xl sm:text-5xl font-extrabold text-[var(--color-primary)] leading-none">
+                  $3,499
+                </span>
+                <span className="text-base font-semibold text-[var(--color-text-muted)]">
+                  / tooth
+                </span>
+              </div>
+              <div className="mt-1.5 text-xs text-[var(--color-text-muted)]">
+                *Cost depends on actual treatment plan
+              </div>
+            </div>
+          </Reveal>
         </div>
 
         {/* Right: Form */}
