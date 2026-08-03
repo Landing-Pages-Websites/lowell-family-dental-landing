@@ -57,7 +57,7 @@ export function Header({ tone = "light" }: HeaderProps) {
             </svg>
             {PHONE}
           </a>
-          <a href="#contact" className="btn-primary whitespace-nowrap sm:whitespace-normal text-[12.5px] min-[360px]:text-[13px] sm:text-base px-3 min-[360px]:px-[14px] sm:px-5 py-2.5 sm:py-3">
+          <a href="#contact" className="btn-primary whitespace-nowrap sm:whitespace-normal text-[12.5px] min-[360px]:text-[13px] sm:text-base px-[12px]! min-[360px]:px-[14px]! sm:px-[1.6rem]! py-[10px]! sm:py-[0.95rem]!">
             Free Consultation
           </a>
         </div>
