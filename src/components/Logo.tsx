@@ -50,17 +50,17 @@ export function Logo({ className = "h-12", variant = "wordmark", inverse = false
 
   // Wordmark: mark + name set
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
-      <Logo variant="mark" className="h-full w-auto" inverse={inverse} />
-      <div className="flex flex-col leading-tight">
+    <div className={`flex items-center gap-2 min-[360px]:gap-[9px] sm:gap-3 ${className}`}>
+      <Logo variant="mark" className="h-[34px] min-[360px]:h-10 sm:h-full w-auto" inverse={inverse} />
+      <div className="flex flex-col leading-tight max-w-[96px] min-[360px]:max-w-[124px] sm:max-w-none">
         <span
-          className="font-[var(--font-manrope)] font-bold tracking-tight text-[15px] sm:text-[17px] uppercase"
+          className="font-[var(--font-manrope)] font-bold tracking-tight text-[12px] leading-[1.1] min-[360px]:text-[13px] min-[360px]:leading-[1.12] min-[360px]:tracking-[-0.005em] sm:text-[17px] sm:leading-tight sm:tracking-tight uppercase"
           style={{ color: blue }}
         >
           Lowell Family Dental
         </span>
         <span
-          className="font-[var(--font-inter)] font-medium tracking-[0.18em] text-[10px] sm:text-[11px] uppercase"
+          className="font-[var(--font-inter)] font-medium tracking-[0.01em] text-[7.5px] leading-[1.25] whitespace-normal min-[360px]:text-[8px] min-[360px]:leading-[1.3] min-[360px]:whitespace-nowrap sm:text-[11px] sm:leading-tight sm:tracking-[0.18em] sm:whitespace-normal uppercase"
           style={{ color: grey }}
         >
           Practice &amp; Implant Center

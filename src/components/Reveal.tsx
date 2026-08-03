@@ -37,8 +37,8 @@ export function Reveal({
 
   const fromMap: Record<NonNullable<RevealProps["variant"]>, string> = {
     up: "translate-y-8",
-    left: "-translate-x-6",
-    right: "translate-x-6",
+    left: "translate-y-8 lg:translate-y-0 lg:-translate-x-6",
+    right: "translate-y-8 lg:translate-y-0 lg:translate-x-6",
     fade: "",
   };
 
