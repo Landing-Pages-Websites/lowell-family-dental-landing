@@ -32,30 +32,37 @@ export function Hero() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        {/* Left: copy column — over the gradient, light text */}
-        <div className="lg:col-span-7 text-white">
-          <Reveal variant="up">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 flex flex-col lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-12">
+        {/*
+          Copy column. On mobile `contents` flattens these blocks into the parent
+          flex column so per-block `order-*` controls the mobile hierarchy (surfacing
+          the form in the first viewport). At `lg:` it collapses back to a normal
+          block spanning columns 1–7 whose height is driven by its own content, so
+          the tall form card can never stretch it (no dead gaps). Desktop reading
+          order = natural JSX order via `lg:order-none`.
+        */}
+        <div className="contents lg:block lg:col-span-7 text-white">
+          <Reveal variant="up" className="order-1 lg:order-none">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 backdrop-blur px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white">
               <span className="w-2 h-2 rounded-full bg-[var(--color-accent)]" />
               Lowell, MA · Board Certified Dental Implant Specialist
             </span>
           </Reveal>
-          <Reveal variant="up" delay={80}>
-            <h1 className="mt-5 text-4xl sm:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.04]">
+          <Reveal variant="up" delay={80} className="order-2 lg:order-none mt-4 lg:mt-5">
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.04]">
               Get a permanent, confident smile with{" "}
               <span className="text-[var(--color-accent-light)]">dental implants</span> in Lowell.
             </h1>
           </Reveal>
-          <Reveal variant="up" delay={160}>
-            <p className="mt-5 text-lg sm:text-xl text-white/90 max-w-2xl leading-relaxed">
+          <Reveal variant="up" delay={160} className="order-5 lg:order-none mt-0 lg:mt-5">
+            <p className="text-lg sm:text-xl text-white/90 max-w-2xl leading-relaxed">
               Board Certified Dental Implant Specialist. 3D CT-guided precision.
               Flexible financing and exclusive new-patient discounts. Eat, smile and
               laugh again — without floppy dentures, without embarrassment, without the run-around.
             </p>
           </Reveal>
-          <Reveal variant="up" delay={220}>
-            <ul className="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 max-w-xl">
+          <Reveal variant="up" delay={220} className="order-6 lg:order-none mt-6 lg:mt-7">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 max-w-xl">
               {[
                 "Single, snap-on dentures & fixed full-arch (All-on-X)",
                 "Sedation options for anxious patients",
@@ -76,8 +83,8 @@ export function Hero() {
               ))}
             </ul>
           </Reveal>
-          <Reveal variant="up" delay={300}>
-            <div className="mt-8 flex flex-wrap items-center gap-5">
+          <Reveal variant="up" delay={300} className="order-8 lg:order-none mt-6 lg:mt-8">
+            <div className="flex flex-wrap items-center gap-5">
               <a href="#contact" className="btn-primary text-base sm:text-lg">
                 Book My Free Consultation
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -95,8 +102,8 @@ export function Hero() {
               </a>
             </div>
           </Reveal>
-          <Reveal variant="up" delay={380}>
-            <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-white/85">
+          <Reveal variant="up" delay={380} className="order-3 lg:order-none mt-4 lg:mt-9">
+            <div className="flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-white/85">
               <div className="flex items-center gap-2">
                 <Stars />
                 <span className="font-semibold text-white">4.9</span>
@@ -108,9 +115,9 @@ export function Hero() {
               <span className="font-medium">BCBS, Delta Dental, Aetna, MetLife &amp; more</span>
             </div>
           </Reveal>
-          <Reveal variant="up" delay={460}>
+          <Reveal variant="up" delay={460} className="order-7 lg:order-none mt-6 lg:mt-7">
             {/* Promo price callout — mirrors the below-fold single-tooth block, adapted for the dark hero */}
-            <div className="mt-7 inline-flex flex-col rounded-2xl bg-white/95 backdrop-blur px-5 py-4 shadow-xl ring-1 ring-white/50">
+            <div className="inline-flex flex-col rounded-2xl bg-white/95 backdrop-blur px-5 py-4 shadow-xl ring-1 ring-white/50">
               <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
                 Implant + Abutment + Crown
               </div>
@@ -132,34 +139,37 @@ export function Hero() {
           </Reveal>
         </div>
 
-        {/* Right: Form */}
-        <div className="lg:col-span-5">
-          <Reveal variant="right" delay={140}>
-            <div className="relative">
-              {/* Floating CT-scan badge — visible offset to top-right of form */}
-              <div className="hidden lg:flex absolute -top-5 -right-5 z-20 items-center gap-3 bg-[var(--color-accent)] text-white rounded-2xl shadow-2xl px-4 py-3">
-                <svg className="w-7 h-7 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-                <div className="text-left">
-                  <div className="text-[10px] uppercase tracking-widest font-bold text-white/85 leading-none">
-                    Included Free
-                  </div>
-                  <div className="text-base font-extrabold leading-tight">
-                    3D CT Scan
-                  </div>
+        {/* Form — sibling of the copy wrapper so it can slot into the mobile order
+            (step 4, right under the trust row) while sitting in columns 8–12 on desktop */}
+        <Reveal
+          variant="right"
+          delay={140}
+          className="order-4 lg:order-none lg:col-span-5 mt-5 lg:mt-0 mb-8 lg:mb-0 lg:self-center"
+        >
+          <div className="relative">
+            {/* Floating CT-scan badge — visible offset to top-right of form */}
+            <div className="hidden lg:flex absolute -top-5 -right-5 z-20 items-center gap-3 bg-[var(--color-accent)] text-white rounded-2xl shadow-2xl px-4 py-3">
+              <svg className="w-7 h-7 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div className="text-left">
+                <div className="text-[10px] uppercase tracking-widest font-bold text-white/85 leading-none">
+                  Included Free
+                </div>
+                <div className="text-base font-extrabold leading-tight">
+                  3D CT Scan
                 </div>
               </div>
-              <div className="relative z-10">
-                <LeadForm
-                  variant="hero"
-                  headline="Book your free implant consultation"
-                  subhead="No obligation. We'll review your goals, discuss costs and financing, and answer every question."
-                />
-              </div>
             </div>
-          </Reveal>
-        </div>
+            <div className="relative z-10">
+              <LeadForm
+                variant="hero"
+                headline="Book your free implant consultation"
+                subhead="No obligation. We'll review your goals, discuss costs and financing, and answer every question."
+              />
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
