@@ -39,7 +39,7 @@ export function Header({ tone = "light" }: HeaderProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${headerCls}`}
     >
-      <div className="max-w-7xl mx-auto px-3 min-[360px]:px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-3 min-[360px]:px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
         <a href="#hero" className="shrink-0" aria-label="Lowell Family Dental Practice — home">
           <Logo className="h-10 sm:h-12" variant="wordmark" inverse={isDark} />
         </a>
