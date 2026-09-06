@@ -128,30 +128,45 @@ export function LeadForm({
 
   const showError = (k: keyof FormData) => touched[k] && !data[k];
 
+  // Hero variant is compacted on sub-640px screens so the submit button stays
+  // within the first mobile viewport; sm+ (and the contact variant) are unchanged.
+  const isHero = variant === "hero";
+  const fieldRow = isHero ? "mt-2.5 sm:mt-3" : "mt-3";
+
   return (
     <form
       onSubmit={handleSubmit}
       noValidate
-      className={`relative rounded-2xl p-6 sm:p-8 ${
-        variant === "hero"
-          ? "bg-white shadow-2xl border border-[var(--color-border)]"
-          : "bg-white shadow-lg border border-[var(--color-border)]"
+      className={`relative rounded-2xl ${
+        isHero
+          ? "p-4 sm:p-8 bg-white shadow-2xl border border-[var(--color-border)]"
+          : "p-6 sm:p-8 bg-white shadow-lg border border-[var(--color-border)]"
       }`}
     >
       {(headline || subhead) && (
-        <div className="mb-5 sm:mb-6">
+        <div className={isHero ? "mb-3 sm:mb-6" : "mb-5 sm:mb-6"}>
           {headline && (
             <h3 className="text-xl sm:text-2xl font-bold text-[var(--color-primary)] leading-tight">
               {headline}
             </h3>
           )}
           {subhead && (
-            <p className="mt-1.5 text-sm text-[var(--color-text-muted)]">{subhead}</p>
+            <p
+              className={`mt-1.5 text-sm text-[var(--color-text-muted)] ${
+                isHero ? "hidden sm:block" : ""
+              }`}
+            >
+              {subhead}
+            </p>
           )}
         </div>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div
+        className={`grid gap-3 ${
+          isHero ? "grid-cols-2" : "grid-cols-1 sm:grid-cols-2"
+        }`}
+      >
         <div>
           <label htmlFor="firstName" className="sr-only">
             First name
@@ -190,7 +205,7 @@ export function LeadForm({
         </div>
       </div>
 
-      <div className="mt-3">
+      <div className={fieldRow}>
         <label htmlFor="email" className="sr-only">
           Email
         </label>
@@ -209,7 +224,7 @@ export function LeadForm({
         />
       </div>
 
-      <div className="mt-3">
+      <div className={fieldRow}>
         <label htmlFor="phone" className="sr-only">
           Phone
         </label>
@@ -230,7 +245,7 @@ export function LeadForm({
         />
       </div>
 
-      <div className="mt-3 relative">
+      <div className={`${fieldRow} relative`}>
         <label htmlFor="timeline" className="sr-only">
           When are you looking to schedule?
         </label>
@@ -269,7 +284,9 @@ export function LeadForm({
       <button
         type="submit"
         disabled={submitting || success}
-        className="btn-primary w-full mt-5 text-base sm:text-lg py-3.5 disabled:opacity-60 disabled:cursor-not-allowed"
+        className={`btn-primary w-full text-base sm:text-lg py-3.5 disabled:opacity-60 disabled:cursor-not-allowed ${
+          isHero ? "mt-4 sm:mt-5" : "mt-5"
+        }`}
       >
         {submitting ? "Submitting…" : "Book My Free Consultation"}
       </button>
