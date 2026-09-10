@@ -51,7 +51,7 @@ export function Hero() {
           <Reveal variant="up" delay={80} className="order-2 lg:order-none mt-4 lg:mt-5">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.04]">
               Get a permanent, confident smile with{" "}
-              <span className="text-[var(--color-accent-light)]">dental implants</span> in Lowell.
+              <span className="text-[var(--color-accent-light)]">dental implants</span>. Ask about cost and financing.
             </h1>
           </Reveal>
           <Reveal variant="up" delay={160} className="order-5 lg:order-none mt-0 lg:mt-5">
