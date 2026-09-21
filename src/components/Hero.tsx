@@ -5,6 +5,27 @@ import { LeadForm } from "./LeadForm";
 import { Reveal } from "./Reveal";
 import { PHONE, PHONE_HREF } from "./Brand";
 
+const HERO_PRICES = [
+  {
+    label: "Implant + Abutment + Crown",
+    oldPrice: "$5,200",
+    price: "$3,499",
+    unit: "/ tooth",
+  },
+  {
+    label: "Snap-on Dentures",
+    oldPrice: "$19,000",
+    price: "$14,000",
+    unit: "/ arch",
+  },
+  {
+    label: "Fixed Full Arch (All-on-X)",
+    oldPrice: "$30,000",
+    price: "$22,000",
+    unit: "/ arch",
+  },
+] as const;
+
 export function Hero() {
   return (
     <section
@@ -116,23 +137,35 @@ export function Hero() {
             </div>
           </Reveal>
           <Reveal variant="up" delay={460} className="order-7 lg:order-none mt-6 lg:mt-7">
-            {/* Promo price callout — mirrors the below-fold single-tooth block, adapted for the dark hero */}
-            <div className="inline-flex flex-col rounded-2xl bg-white/95 backdrop-blur px-5 py-4 shadow-xl ring-1 ring-white/50">
+            {/* Promo price callout — mirrors the below-fold implant blocks, adapted for the dark hero */}
+            <div className="flex flex-col rounded-2xl bg-white/95 backdrop-blur px-5 py-4 shadow-xl ring-1 ring-white/50 max-w-2xl">
               <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
-                Implant + Abutment + Crown
+                New-patient implant pricing
               </div>
-              <div className="mt-1 flex items-baseline gap-2.5">
-                <span className="text-base font-medium text-[var(--color-text-muted)] line-through decoration-2">
-                  $5,200
-                </span>
-                <span className="text-4xl sm:text-5xl font-extrabold text-[var(--color-primary)] leading-none">
-                  $3,499
-                </span>
-                <span className="text-base font-semibold text-[var(--color-text-muted)]">
-                  / tooth
-                </span>
+              <div className="mt-3 grid gap-y-3.5 sm:grid-cols-3 sm:gap-x-5">
+                {HERO_PRICES.map((p, i) => (
+                  <div
+                    key={p.label}
+                    className={i > 0 ? "sm:pl-5 sm:border-l sm:border-[var(--color-border)]" : ""}
+                  >
+                    <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-text-muted)] leading-snug">
+                      {p.label}
+                    </div>
+                    <div className="mt-1 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                      <span className="text-sm font-medium text-[var(--color-text-muted)] line-through decoration-2">
+                        {p.oldPrice}
+                      </span>
+                      <span className="text-2xl font-extrabold text-[var(--color-primary)] leading-none">
+                        {p.price}
+                      </span>
+                      <span className="text-sm font-semibold text-[var(--color-text-muted)]">
+                        {p.unit}
+                      </span>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="mt-1.5 text-xs text-[var(--color-text-muted)]">
+              <div className="mt-3 text-xs text-[var(--color-text-muted)]">
                 *Cost depends on actual treatment plan
               </div>
             </div>

@@ -7,7 +7,7 @@ import { PHONE, PHONE_HREF } from "./Brand";
 const FAQS = [
   {
     q: "How much do dental implants cost in Lowell?",
-    a: "Implant costs vary based on the number of teeth being replaced, whether you need bone grafting, and which type of crown or bridge is placed on top. We provide a written, all-inclusive treatment plan after your free consultation — no surprise add-ons. Most single implants land in the typical range you'll see online; full-arch (All-on-X) is dramatically less per tooth than placing implants individually. We also offer 0% financing on qualifying treatment plans.",
+    a: "Our new-patient implant pricing is straightforward: a single implant is $3,499 per tooth including the implant, abutment, and crown; snap-on dentures are $14,000 per arch; and a fixed full arch (All-on-X) is $22,000 per arch. *Cost depends on actual treatment plan — we provide a written, all-inclusive plan after your free consultation, with no surprise add-ons. We also offer 0% financing on qualifying treatment plans.",
   },
   {
     q: "Does the procedure hurt?",
