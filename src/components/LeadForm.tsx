@@ -97,11 +97,6 @@ export function LeadForm({
     });
   };
 
-  const handleSubmitClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (submitting || success || !isValid()) return;
-    e.currentTarget.form?.requestSubmit();
-  };
-
   // ─── Success ───
   if (success) {
     return (
@@ -296,8 +291,7 @@ export function LeadForm({
       )}
 
       <button
-        type="button"
-        onClick={handleSubmitClick}
+        type="submit"
         disabled={submitting || success}
         className={`btn-primary w-full text-base sm:text-lg py-3.5 disabled:opacity-60 disabled:cursor-not-allowed ${
           isHero ? "mt-4 sm:mt-5" : "mt-5"
