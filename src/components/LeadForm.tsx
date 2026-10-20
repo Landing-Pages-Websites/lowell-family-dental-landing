@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useMegaLeadForm } from "@/hooks/useMegaLeadForm";
 import {
   CUSTOMER_ID,
+  PHONE,
+  PHONE_HREF,
   SITE_ID,
   SOURCE_PROVIDER,
   TIMELINE_OPTIONS,
@@ -41,21 +43,20 @@ export function LeadForm({
   subhead,
   sourceProvider,
 }: LeadFormProps) {
-  const { status, errorMessage, submitLead } = useMegaLeadForm({
+  const { status, submitLead } = useMegaLeadForm({
     customerId: CUSTOMER_ID,
     siteId: SITE_ID,
     sourceProvider: sourceProvider || SOURCE_PROVIDER,
   });
 
   const [data, setData] = useState<FormData>(initial);
-  const [submitted, setSubmitted] = useState(false);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
 
   const update = <K extends keyof FormData>(k: K, v: FormData[K]) =>
     setData((d) => ({ ...d, [k]: v }));
 
   const submitting = status === "submitting";
-  const success = status === "success" || submitted;
+  const success = status === "success";
 
   const formatPhone = (raw: string) => {
     const d = raw.replace(/\D/g, "").slice(0, 10);
@@ -76,14 +77,17 @@ export function LeadForm({
     return null;
   };
 
+  const isValid = (): boolean => {
+    if (!validate()) return true;
+    setTouched({ firstName: true, lastName: true, email: true, phone: true, timeline: true });
+    return false;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (submitting || success) return;
-    const err = validate();
-    if (err) {
-      setTouched({ firstName: true, lastName: true, email: true, phone: true, timeline: true });
-      return;
-    }
+    if (submitting || success || !isValid()) return;
+    // The hook owns the outcome: only a confirmed { ok: true } response flips
+    // status to "success"; failures leave the form and values in place.
     await submitLead({
       firstName: data.firstName.trim(),
       lastName: data.lastName.trim(),
@@ -91,7 +95,6 @@ export function LeadForm({
       phone: data.phone.replace(/\D/g, ""),
       timeline: data.timeline,
     });
-    setSubmitted(true);
   };
 
   // ─── Success ───
@@ -277,8 +280,14 @@ export function LeadForm({
         </div>
       </div>
 
-      {errorMessage && status === "error" && (
-        <div className="mt-3 text-sm text-red-600">{errorMessage}</div>
+      {status === "error" && (
+        <div role="alert" className="mt-3 text-sm text-red-600">
+          Something went wrong — please try again or call{" "}
+          <a className="font-semibold underline hover:no-underline" href={PHONE_HREF}>
+            {PHONE}
+          </a>
+          .
+        </div>
       )}
 
       <button
