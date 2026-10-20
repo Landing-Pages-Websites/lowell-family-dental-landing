@@ -282,7 +282,7 @@ export function LeadForm({
 
       {status === "error" && (
         <div role="alert" className="mt-3 text-sm text-red-600">
-          Something went wrong — please try again or call{" "}
+          Something went wrong. Please try again or call{" "}
           <a className="font-semibold underline hover:no-underline" href={PHONE_HREF}>
             {PHONE}
           </a>
